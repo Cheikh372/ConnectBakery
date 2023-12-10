@@ -1,0 +1,6 @@
+@ConnectBakery.Employe.Api_HostAddress = http://localhost:5234
+
+GET {{ConnectBakery.Employe.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

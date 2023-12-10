@@ -1,0 +1,77 @@
+version: '3.4'
+
+services:
+  connectbakery-db:
+    image: postgres:15-alpine
+    networks: 
+      - backend
+
+  adminer:
+    image: adminer
+    networks: 
+      - backend
+      
+
+  conectbakery.user.api:
+    image: ${DOCKER_REGISTRY-}conectbakery-user-api
+    build:
+      context: .
+      dockerfile: ConectBakery.User.Api/Dockerfile
+    networks: 
+      - backend
+      
+
+  connectbakery.client.api:
+    image: ${DOCKER_REGISTRY-}connectbakery-client-api
+    build:
+      context: .
+      dockerfile: ConnectBakery.Client.Api/Dockerfile
+    networks: 
+      - backend
+      
+
+  connectbakery.employe.api:
+    image: ${DOCKER_REGISTRY-}connectbakery-employe-api
+    build:
+      context: .
+      dockerfile: ConnectBakery.Employe.Api/Dockerfile
+    networks: 
+      - backend
+      
+
+  connectbakery.order.api:
+    image: ${DOCKER_REGISTRY-}connectbakery-order-api
+    build:
+      context: .
+      dockerfile: ConnectBakery.Order.Api/Dockerfile
+    networks: 
+      - backend
+      
+
+  connectbakery.product.api:
+    image: ${DOCKER_REGISTRY-}connectbakery-product-api
+    build:
+      context: .
+      dockerfile: ConnectBakery.Product.Api/Dockerfile
+    networks: 
+      - backend
+      
+
+  connectbakery.stock.api:
+    image: ${DOCKER_REGISTRY-}connectbakery-stock-api
+    build:
+      context: .
+      dockerfile: ConnectBakery.Stock.Api/Dockerfile
+    networks: 
+      - backend
+      
+
+networks:
+  backend:
+    name: connectbakery-network
+
+
+
+
+
+

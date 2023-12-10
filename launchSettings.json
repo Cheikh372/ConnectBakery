@@ -1,0 +1,17 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "connectbakery.core.api": "StartDebugging",
+        "conectbakery.user.api": "StartDebugging",
+        "connectbakery.client.api": "StartDebugging",
+        "connectbakery.employe.api": "StartDebugging",
+        "connectbakery.order.api": "StartDebugging",
+        "connectbakery.product.api": "StartDebugging",
+        "connectbakery.stock.api": "StartDebugging"
+      }
+    }
+  }
+}
